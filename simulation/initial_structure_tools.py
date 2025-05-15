@@ -4,7 +4,7 @@ from scipy import interpolate
 import matplotlib.pyplot as plt
 from hilbertcurve.hilbertcurve import HilbertCurve
 import warnings
-from .utils import *
+from utils import *
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 

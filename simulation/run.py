@@ -7,8 +7,8 @@ import os
 import sys
 from typing import List
 from sys import stdout
-from .args_definition import *
-from .model import *
+from args_definition import *
+from model import *
 
 
 class Tee:
