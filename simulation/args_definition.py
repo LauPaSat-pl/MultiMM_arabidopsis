@@ -12,14 +12,14 @@ from openmm.unit import Quantity
 try:
     with importlib.resources.path('simulation.forcefields', 'ff.xml') as default_xml_path:
         default_xml_path = str(default_xml_path)
-except FileNotFoundError:
+except FileNotFoundError or ModuleNotFoundError:
     default_xml_path = 'simulation/forcefields/ff.xml'
 
 # Dynamically set the default path to the XML file in the package
 try:
     with importlib.resources.path('simulation.data', 'hg38_gtf_annotations.tsv') as default_gene_path:
         default_gene_path = str(default_gene_path)
-except FileNotFoundError:
+except FileNotFoundError or ModuleNotFoundError:
     default_gene_path = 'simulation/data/hg38_gtf_annotations.tsv'
 
 
