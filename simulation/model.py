@@ -42,7 +42,7 @@ class MultiMM:
         coords = [args.LOC_START, args.LOC_END] if args.LOC_START is not None else None
 
         if (args.GENE_TSV is not None) and (str(args.MODELLING_LEVEL).lower() == 'gene'):
-            if args.GENE_ID is not None and str(args.GENE_ID).lower() != 'none' and str(args.GENE_ID).lower() != '':
+            if args.GENE_ID and str(args.GENE_ID).lower() != 'none':
                 print('Gene ID:', args.GENE_ID)
                 chrom, coords, gene_coords = get_gene_region(gene_tsv=args.GENE_TSV, gene_id=args.GENE_ID,
                                                              window_size=args.GENE_WINDOW)
@@ -67,8 +67,7 @@ class MultiMM:
         #         self.Cs, self.chr_ends = get_eigenvector(args.EIGENVECTOR_TSV, args.N_BEADS, chrom, coords)
         #     else:
         #         raise ValueError('Eigenvector should be in tsv format.')
-        if args.COMPARTMENT_PATH is not None and str(args.COMPARTMENT_PATH).lower() != 'none' and str(
-                args.COMPARTMENT_PATH).lower() != '':
+        if args.COMPARTMENT_PATH and str(args.COMPARTMENT_PATH).lower() != 'none':
             if args.COMPARTMENT_PATH.lower().endswith('.bed'):
                 self.Cs, self.chr_ends, self.chrom_idxs = import_bed(bed_file=args.COMPARTMENT_PATH,
                                                                      N_beads=self.args.N_BEADS, chrom=chrom,
@@ -99,7 +98,7 @@ class MultiMM:
 
         # Chromosomes
         self.chrom_spin, self.chrom_strength = np.zeros(self.args.N_BEADS), np.zeros(self.args.N_BEADS)
-        if self.args.CHROM is None or self.args.CHROM == '' or str(self.args.CHROM).lower() == 'none':
+        if not self.args.CHROM or str(self.args.CHROM).lower() == 'none':
             for i in range(len(self.chr_ends) - 1):
                 self.chrom_spin[self.chr_ends[i]:self.chr_ends[i + 1]] = self.chrom_idxs[i]
                 self.chrom_strength[self.chr_ends[i]:self.chr_ends[i + 1]] = chrom_strength[i]
