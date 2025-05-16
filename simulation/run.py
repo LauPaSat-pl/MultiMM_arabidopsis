@@ -107,6 +107,7 @@ class ArgumentChanger:
 
 def args_tests(args):
     if not args.LOOPS_PATH:
+        print(args.LOOPS_PATH)
         raise ValueError('\033[91mMultiMM cannot run without providing interactions in .bedpe format!!!\033[0m')
     elif not args.COMPARTMENT_PATH and args.COB_USE_COMPARTMENT_BLOCKS:
         raise ValueError(
