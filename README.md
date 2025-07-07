@@ -180,7 +180,7 @@ The following modelling levels are available:
 Additionally, this argument automatically sets the number of simulation beads. Regardless of the user-defined `N_BEADS` value, specifying `MODELLING_LEVEL` overrides it with a default setting:
 * GENE: 1,000 beads
 * REGION: 5,000 beads
-* CHROMOSOME: 20,000 beads
+* CHROMOSOME: 1 bead per 1,000 nucleotides
 * GW: 200,000 beads
 
 This feature offers a convenient starting point for new users. Nevertheless, we recommend that advanced users avoid using this argument if they require finer control over simulation parameters.

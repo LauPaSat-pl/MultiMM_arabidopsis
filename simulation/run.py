@@ -76,7 +76,7 @@ class ArgumentChanger:
         elif str(modelling_level).lower() in ('chromosome', 'chrom'):
             print(
                 '\033[91m' + 'MAGIC COMMENT: For chromosome level it is needed to provide a loops_path. Do not forget to specify the beginning and end of your chromosome. You can remove the centromers or telomers that are in the boundaries. You can optionally add an compartment_path to include block-copolymer forces.' + '\033[0m')
-            self.set_arg('N_BEADS', 20000)
+            self.set_arg('N_BEADS', self.chrom_sizes[self.args.CHROM]//1000)
             self.set_arg('SC_USE_SPHERICAL_CONTAINER', False)
             self.set_arg('CHB_USE_CHROMOSOMAL_BLOCKS', False)
             self.set_arg('SCB_USE_SUBCOMPARTMENT_BLOCKS', False)

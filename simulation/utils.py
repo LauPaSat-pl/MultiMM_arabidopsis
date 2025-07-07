@@ -454,7 +454,6 @@ def get_gene_region(gene_tsv, gene_id=None, gene_name=None, window_size=200000):
         end = genes[genes['gene_id'] == gene_id]['end'].values[0]
     elif gene_name is not None:
         if gene_name not in genes['gene_name'].values:
-            print(genes)
             raise ValueError(f"Gene name '{gene_name}' not found in the provided TSV file.")
         print('Region will be defined based on gene name.')
         chrom = genes[genes['gene_name'] == gene_name]['chromosome'].values[0]
