@@ -1,3 +1,8 @@
+This is a fork and slight modification of the MultiMM tool created by Sebastian Korsak and Krzysztof Banecki which was published here: https://github.com/SFGLab/MultiMM. It was modified by changing chromosome data to that of Arabidopsis thaliana and scale of the simulation. No changes to the program logic or simulation engine were made. The description below is taken from the original repo (with exception of change to default setting for chromosome level modeling N_BEADS value).
+
+***
+
+
 # MultiMM: An OpenMM-based software for whole genome 3D structure reconstruction
 
 MultiMM is an OpenMM model designed for modeling the 3D structure of the whole *human* genome. Its distinguishing feature is that it is multiscale, meaning it aims to model different levels of chromatin organization, from smaller scales (nucleosomes) to the level of chromosomal territories. The algorithm is both fast and accurate. A key feature enabling its speed is GPU parallelization via OpenMM, along with smart assumptions that assist the optimizer in finding the global minimum. One such fundamental assumption is the use of a Hilbert curve as the initial structure. This helps MultiMM to converge faster because the initial structure is already highly compacted.
