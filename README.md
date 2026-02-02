@@ -1,4 +1,7 @@
-This is a fork and slight modification of the MultiMM tool created by Sebastian Korsak and Krzysztof Banecki which was published here: https://github.com/SFGLab/MultiMM. It was modified by changing chromosome data to that of Arabidopsis thaliana and scale of the simulation. No changes to the program logic or simulation engine were made. The description below is taken from the original repo (with exception of change to default setting for chromosome level modeling N_BEADS value).
+This is a fork and slight modification of the MultiMM tool described in 
+- Korsak, Sevastianos, Krzysztof Banecki, and Dariusz Plewczynski. "Multiscale molecular modeling of chromatin with MultiMM: From nucleosomes to the whole genome." Computational and Structural Biotechnology Journal 23 (2024): 3537–3548.
+
+which was published here: https://github.com/SFGLab/MultiMM. It was modified by changing chromosome data to that of Arabidopsis thaliana and scale of the simulation. No changes to the program logic or simulation engine were made. The description below is taken from the original repo (with exception of change to default setting for chromosome level modeling N_BEADS value).
 
 ***
 
